@@ -1,9 +1,10 @@
-name: Build and deploy ASP.Net Core app to Azure Web App
+name: Build and deploy ASP.Net Core app to Azure Web App (DISABLED)
 
 on:
-  push:
-    branches:
-      - main
+  # Disabled due to Azure quota restrictions
+  # push:
+  #   branches:
+  #     - main
   workflow_dispatch:
 
 env:
