@@ -2,7 +2,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var app = builder.Build();
 
-app.MapGet("/", () => "🚀 Updated! .NET 8 Web App successfully deployed to Azure Web App! 🎉");
+app.MapGet("/", () => "🚀God is great 🎉");
 
 app.MapGet("/health", () => new { Status = "Healthy", Timestamp = DateTime.UtcNow });
 
