@@ -3,7 +3,7 @@ name: Build and deploy ASP.Net Core app to Azure Web App
 on:
   push:
     branches:
-      - Staging
+      - staging
   workflow_dispatch:
 
 env:
@@ -61,5 +61,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          slot-name: 'Staging'
+          slot-name: 'staging'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_STAGING }}

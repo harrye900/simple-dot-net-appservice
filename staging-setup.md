@@ -1,4 +1,4 @@
-# Staging Deployment Setup
+## Staging Deployment Setup
 
 ## Required GitHub Secrets:
 
