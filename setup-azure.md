@@ -7,20 +7,20 @@ Run these commands to create your Azure Web App:
 az login
 
 # Create resource group
-az group create --name myResourceGroup --location "East US"
+az group create --name rg-cli-webapp --location "East US"
 
 # Create App Service plan
-az appservice plan create --name myAppServicePlan --resource-group myResourceGroup --sku FREE
+az appservice plan create --name myappserviceplan --resource-group rg-cli-webapp --sku B1
 
-# Create Web App (replace 'harrye900-simple-webapp' with your unique name)
-az webapp create --resource-group myResourceGroup --plan myAppServicePlan --name harrye900-simple-webapp --runtime "DOTNETCORE|8.0"
+# Create Web App
+az webapp create --resource-group rg-cli-webapp --plan myappserviceplan --name mywebapp-cli-check --runtime "DOTNETCORE|8.0"
 ```
 
 ## 2. Get Publish Profile:
 
 ```bash
 # Download publish profile
-az webapp deployment list-publishing-profiles --name harrye900-simple-webapp --resource-group myResourceGroup --xml
+az webapp deployment list-publishing-profiles --name mywebapp-cli-check --resource-group rg-cli-webapp --xml
 ```
 
 ## 3. Add GitHub Secret:
